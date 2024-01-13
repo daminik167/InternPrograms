@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> Ecma 6 Let Var Const difference</title>
+    </head>
+    <body>
+        <h1>Let Keyword</h1>
+        <script>
+            let a=10;
+            if(true)
+            {
+                let a=20;
+                console.log(a);
+            }
+            console.log(a);
+
+            let b=20;
+            //let b=50; not allowed
+            b=50; //allowed
+            console.log(b);
+
+            //Hoisting is not possible
+            let c;
+            console.log(c);
+
+            for(var i=0;i<10;i++) //var has globalm scope so it will print 10, 10 times
+            {
+                setTimeout(()=>{
+                    console.log(i)
+                },1000)
+            }
+
+            for(let i=0;i<10;i++) // let has block scope so it will print 0-9 
+            {
+                setTimeout(()=>{
+                    console.log(i)
+                },1000)
+            }
+
+        </script>
+    </body>
+</html>
+<!-- Note
+    Use of Let Keyword
+    - It will not Overlap the variables if we use the blocks or any condition
+    - will not allow Redeclare the variable
+    - but allow to update it
+    - Can nt do Hoisting - that is we cant use it if we dont declare it... we can do it using Var
+-->
