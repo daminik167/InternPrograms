@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title> Find And Find Index</title>
+    </head>
+    <body>
+        <h1>Find and Find Index</h1>
+        <script>
+            let data=[10,96,52,3,38,56];
+            function custom(item){
+                return item<90;
+            }
+            let result=data.find(function(item) // find will give you the first value it matches to the condition
+            {
+                return item>3;
+            })
+            console.warn(result);
+            
+
+            let result2=data.findIndex(function(item) //find index will show you the index of the matching result
+            {
+                return item>3;
+            })
+            console.warn(result2);
+
+            let result3=data.find((item)=>item>80 && item<90) //using arrow function
+            console.log(result3);
+
+            let result4=data.find(custom)
+            console.log(result4);
+
+            //using array of objects
+            let data2=[
+                {id:10,name:"a"},
+                {id:52,name:"b"},
+                {id:61,name:"c"},
+                {id:4,name:"d"},
+                {id:72,name:"e"},
+                {id:41,name:"f"},
+            ]
+            function custom2(item){
+                return item.id>4;
+            }
+            let result5=data2.find(  function custom2(item){
+                return item.id>4;
+            })
+            console.log(result5);
+
+        </script>
+    </body>
+</html>
