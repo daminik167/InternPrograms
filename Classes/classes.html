@@ -1,0 +1,47 @@
+<!-- What is classes
+    1.Classes are user define data types
+    2.It is one kind of wrapper inside which we define similar type & interrelated properties & function.
+    3.To define variables in the class we do not need to write its datatype, we can directly assign its value.
+    4.To write functions we do not write function keyword. 
+    -->
+<html>
+    <head>
+        <title>Classes</title>
+    </head>
+    <body>
+        <h1>
+            Classes in Es6
+        </h1>
+        <script>
+            class Fruits{
+                name="Mango"
+                constructor()
+                {
+                    console.log("Constructor",this.name) //we use this keyword when we want to use the properties inside the class itself
+                }
+                getFruits()
+                {
+                    console.warn("function")
+                    
+                }
+
+                getColor()
+                {
+                    return "orange"
+                }
+
+                getShape(item)
+                {
+                    return item
+                }
+
+            }
+            let f1=new Fruits()
+            f1.getFruits();
+            console.warn(f1.getColor());
+            console.warn(f1.name);
+            console.warn(f1.getShape("Circle"));
+        </script>
+
+    </body>
+</html>
