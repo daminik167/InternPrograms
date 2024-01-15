@@ -1,0 +1,32 @@
+<!-- Default Parameters is used when there is no parameters in the function, to handle this default parameters are used 
+it introduced in the ES6 
+-> we can add function as a parameter into parameter og other function -->
+
+<html>
+
+<head>
+    <title>Default Parameters</title>
+</head>
+
+<body>
+    <h1>Default Parameters</h1>
+    <script>
+        //function someVal()
+        // {
+        //   return "Last";
+        //}
+        //function add(a,b="middle",c=someVal()){
+        //    return a +" "+ " "+ b +" " + c;
+        //}
+        //console.log(add("First"));
+
+        function main(a,b=main()){ // It will return uncaught Range error  Maximum call stack size exceeded
+            return a+b;
+        }
+       main();
+
+
+    </script>
+</body>
+
+</html>
