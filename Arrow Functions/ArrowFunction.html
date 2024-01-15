@@ -1,0 +1,64 @@
+<!-- Why we use Arrow function
+        1. It is very simple and doesnt havr function name
+        2. When we use it for looping we do not nned to write the return statement i.e. (Windows)
+        3. The arraow fuction dont have its own this.. it reffers its parents classes this (so we do not need to bind in react
+    -->
+<html>
+
+<head>
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <h1>Arrow Function</h1>
+    <script>
+        //named function
+        function test() {
+            return 1;
+        }
+        //anonymous function
+        let test2 = function () {
+            return 1;
+        }
+
+        //Arrow Function
+
+        let test3 = () => {
+            return 1;
+        }
+        console.log(test());
+        console.log(test2());
+        console.log(test3());
+
+        //complex example(it we want to double the size of the array values)
+
+      /*  //using normal function
+      let NewData = [10, 20, 30, 40, 50];
+        let DoubleData = NewData.map(function (item) {
+            return item * 2;
+        })
+        console.log(DoubleData);*/
+
+        //using arrow function
+        let NewData = [10,2,40,5,7,65,54,67];
+        let DoubleData=NewData.map((item)=>item*2)
+        console.log(DoubleData);
+
+        //using This keyword
+        let item={
+            name:"damini",
+            getName:function()
+            {
+                console.warn("normal",this)
+            },
+            getNameArrow:()=>
+            {
+                console.warn("Arraow",this)
+            }
+        }
+        item.getName();
+        item.getNameArrow();    
+    </script>
+</body>
+
+</html>
