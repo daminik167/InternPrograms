@@ -1,0 +1,45 @@
+<!-- Destructuring of Array
+    -there are 2 types of destructuring 1- Arrays 2- objects
+    -Unpacking Arrays inside variables is Destructuring of Array
+    - -->
+<html>
+    <head>
+        <title>
+            Destructuring of array
+        </title>
+    </head>
+    <body>
+        <h1>
+            Destructuring Of Array
+        </h1>
+        <script>
+            let fruits=["Apple","mango","Strawberry"];
+           // let fruits1=fruits[0]; //this is old method, it will return "Apple"
+           // console.warn(fruits1); 
+
+            let [fruits1,fruits2,fruits3]=fruits;
+            console.log(fruits1);//apple will assign to fruit1 variable
+            console.log(fruits2);//mango will assign to fruit2 variable
+            console.log(fruits3);//Strawberry will assign to fruit3 variable
+
+            //If we dont want to print 2nd vale of array the simply we can add black space in new array
+            let colors=["Blue","Red","White"];
+            let [color1, ,color3,color4,color5="Unknown Fruits"]=colors; //, , is called as skip value & = " " is defalut value
+            console.log(color1);//blue will assign to fruit1 variable
+            console.log(color3);//white will assign to fruit3 variable
+
+            //if there is only  values in array but we want to print 4th value then we will get "undefined"
+            console.log(color4);
+            //To resolve this we declare default value
+            console.log(color5);
+
+            //using Rest Operators - when we dont know how much elements are there in the array and you want to print them all
+            let animal=["Dog","Cat","Tiger","monkey","Cow","Snake","mouse"];
+            let [animal1,...animalx]=animal;
+            console.log(animalx);
+           
+
+
+        </script>
+    </body>
+</html>
