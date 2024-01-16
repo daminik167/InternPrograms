@@ -1,0 +1,46 @@
+<!-- Spread Operator
+    -spread operator (...) expands an iterable (like an array) into more elements.
+    -This allows us to quickly copy all or parts of an existing array into another array 
+    -->
+<html>
+    <head>
+        <title>Spread Operator</title>
+    </head>
+    <body>
+        <h1>Spread Operator</h1>
+        <script>
+            let City=["Nashik","Pune","Mumbai"];//array 1
+            let OtherCities=["Goa","Dehli","Aasam"]; //array2
+            
+            function printAll(a,b,c){
+                console.log(a,b,c)
+            }
+            printAll(City[0],City[1],City[2]); //Orginary way
+
+            printAll(...City); //Using Spred Operator: use when we have long array
+
+            //Merging 2 arrays into one variable
+            let allCities=[...City,...OtherCities];
+            console.log("Merging 2 Arrays",allCities);
+
+            //merging one array into another
+            let City3=["Jaipur",...City];
+            console.log("Merging One Array into Another",City3);
+
+            //Copying one Array into another
+            let newCity=City; //will copy its referrence
+            newCity.push("Kerala")
+            console.log("Copying Array ",newCity)//Output: ['Nashik', 'Pune', 'Mumbai', 'Kerala']
+            console.log("Original Array1",City) //Output:  ['Nashik', 'Pune', 'Mumbai', 'Kerala']
+            // So here problem is when we copy one array into another and we add/push any new element into new Array 
+            //the old array will also get updated...
+            //To resolve this we use (...)Spread operator
+
+            let newCity2=[...OtherCities]; //will copy its referrence
+            newCity2.push("Hydrabad")
+            console.log("Copying Array ",newCity2)
+            console.log("Original Array1",OtherCities)
+
+        </script>
+    </body>
+</html>
