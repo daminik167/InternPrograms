@@ -1,0 +1,39 @@
+<!-- Global Functions 
+    - We can use it anywhere
+    - It has fully global Scope
+    - There are two new global functions are introduced in ES6 that is IsFinite & IsNaN
+    -  -->
+<html>
+    <head>
+        <title>
+            New Global Function
+        </title>
+    </head>
+    <body>
+        <h1>
+            New Global Function
+        </h1>
+        <script>
+            //for Isfinite
+
+            //IsFinite will return true if the input is interms of numbers
+            console.warn(isFinite(10))//true
+            console.warn(isFinite("Damini"))//false
+            console.warn(isFinite(10/10))//true
+            console.warn(isFinite(function(){return 1}))//false
+            console.warn(isFinite(Object={}))//false
+            console.warn(isFinite(null))// return true
+            //for IsNaN
+
+            //IsNaN will return True if input is interms of anything(Function, Object) rather than number
+            console.warn(isNaN(10))//False
+            console.warn(isNaN("Damini"))//True
+            console.warn(isNaN(10/10))//false
+            console.warn(isNaN(function(){return 1}))//True
+            console.warn(isNaN(Object={}))//True
+            console.warn(isNaN(null))// return Flase
+            console.warn(isNaN("10"))//false
+
+        </script>
+    </body>
+</html>
