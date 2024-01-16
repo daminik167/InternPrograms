@@ -1,0 +1,32 @@
+<!-- Destructuring of Objects
+    -Assigning an object into different variables
+    - in object destructuring it breaks or assign elemnts using key not by index into variables
+ -->
+<html>
+    <head>
+        <title>Destructuring of Objects</title>
+    </head>
+    <body>
+        <h1>
+            Destructuring of Objects
+        </h1>
+        <script>
+            let Data={
+                name:"Damini k",
+                Email:"daminik16@gmail.com",
+                mobile:1234567890
+            }
+            
+            //let {Email,name}=Data;
+            //console.log(Email,name); 
+
+            //using Rest Operator
+
+            let {name,...mobile}=Data; //will print mobile and rest of the element excluding name
+            console.log(mobile);
+
+            
+
+        </script>
+    </body>
+</html>
