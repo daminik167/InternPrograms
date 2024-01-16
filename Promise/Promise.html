@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Promise in ES6
+        </title>
+    </head>
+    <body>
+        <h1>Promise in ES6</h1>
+        
+        <script>
+            let a=undefined;
+            
+            let promiseData= new Promise((resolve,reject)=>
+            {
+                setTimeout(()=>{
+                    a="Hello Ecma"
+                    resolve("Successfully")
+                },3000);
+            })
+            promiseData.then(()=>{
+                
+                alert(a);
+            })
+        </script>
+    </body>
+</html>
