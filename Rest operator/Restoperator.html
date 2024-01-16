@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Rest Operator</title>
+    </head>
+    <body>
+        <h1>
+            Rest Operator
+        </h1>
+        <script>
+            function Fruits(a,b,c) 
+            {
+                console.warn("fruits" + " " +a);
+            }
+            Fruits("Apple","Banana","Mango","kiwi","strawberry");
+
+            function RestFruits(...a) 
+            {
+                console.warn("fruits" +" "+a);
+            }
+            RestFruits("Apple","Banana","Mango","kiwi","strawberry");
+
+            function FruitTest()
+            {
+            }
+            function RestFruits2(a,...b) 
+            {
+                console.warn("fruits" +" "+b);
+            }
+            RestFruits2("Apple","Banana","Mango","kiwi","strawberry",FruitTest);
+
+        </script>
+    </body>
+</html>
