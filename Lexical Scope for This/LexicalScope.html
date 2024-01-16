@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Lexical Scope for This
+        </title>
+    </head>
+    <body>
+        <h1>
+            lexical Scope for This 
+        </h1> <!-- Lexical Scope is Range/ Scope of somthing 
+        And This keyword refers to an object
+        Lexical Scope: it is an Accessability of variables and functions within a program
+        it is based on where it is defined
+        this problem is resolved by Arrow Function bcz arrow function doesnt have its own this it 
+        refers its parents this -->
+        <script>
+            let data={
+                list:"Friends",
+                names:["Damini","Srushti","Niharika"],
+                getFriends:function()
+                {
+                  //  console.log(list); //Uncaught ReferenceError: list is not defined
+                    console.log(this.list);
+                    console.log(this.names); 
+                   // let that=this.list;
+                    //this.names.map(function(item){
+                      //  console.warn("Friends",item)
+                        //console.warn(this.list,item) //it will return undefined because scope of this will not present here
+                        //console.warn(that,item)
+                  //  })
+
+                  this.names.map((item)=>{
+                    console.log(this.list,item); //arrow functions dont have its own this it uses its parents this
+                  })
+                }
+            }
+            data.getFriends();
+        </script>
+    </body>
+</html>
