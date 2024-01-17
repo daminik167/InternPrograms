@@ -1,0 +1,36 @@
+<!-- JavaScript Generators 
+    - Introduced in ES6
+    - Generator is just a function in which we can pause or resume the part of the function
+     (example: if i call the function first time then it will only show some part of code
+                after 2nd call the next part will be executed)
+    - Defined By function*-->
+<html>
+    <head>
+        <title>JavaScript Generators</title>
+    </head>
+    <body>
+        <h1>JavaScript Generators</h1>
+        <button onclick="getsteps()">Click Here</button>
+        <script>
+            function* steps()
+            {
+                let a=10;
+                let b=20;
+                console.log(a+b)
+                yield 'step 1 is completed'
+                console.log(a-b)
+                yield 'step 2 is completed'
+                console.log(a*b)
+                yield 'step 3 is completed'
+                return "All steps are Done"
+            }
+            let step1=steps();
+            function getsteps()
+            {
+                console.log(step1.next());
+            }
+
+
+        </script>
+    </body>
+</html>
