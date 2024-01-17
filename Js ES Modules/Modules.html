@@ -1,0 +1,43 @@
+<!-- JavaScript ES6 Modules 
+    - Module will allow us to use code of one file into another file.
+    - It helps to manage ambiguity when funcrion with the same name present 
+        in multiple files that situation can also be handle here-->
+<html>
+    <head>
+        <title>JavaScript ES6 Modules</title>
+    </head>
+    <body>
+        <h1>JavaScript ES6 Modules</h1>
+        <script type="module" defer>
+            import user,{otheruser} from './user.js';
+            //Or
+            //import {user} from './user.js';  //used when we not write Default keyword for the export function
+
+            //there is always only one Export default present in the program
+
+            console.log(user());
+            otheruser();
+
+            //function otheruser() //if we create function with the same name it will cause an error(Identifier 
+            //'otheruser' has already been declared ) so in that case we have to give other name to the 
+            //function(like as userO import statement)
+            //{
+            //    console.log("other user from current file");
+            //}
+            import {newUser as NewU ,UserVariable, otherClass,UOC} from './user.js';
+            function newUser()
+            {
+               console.log("new User from Current file")
+            }
+            console.log(NewU());
+            newUser();
+            console.log(UserVariable); // to print variables
+
+            let ObjClass=new otherClass();
+            ObjClass.test();
+
+            UOC.test2();
+
+        </script>
+    </body>
+</html>
